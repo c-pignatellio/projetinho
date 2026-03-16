@@ -92,3 +92,35 @@ img{
     flex-direction: column;
     align-items: center;
 }
+#botaoquiz
+{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(156, 156, 73);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+#botaoquiz:hover{
+    background-color: rgb(154, 154, 100, 0.8);
+}
+input{
+    height: 20px;
+    width: 370px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 8px 0 20px 0;
+    padding: 5px
+}
+input[type="submit"]{
+    background-color: rgb(156, 156, 73);
+    height: 40px;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}

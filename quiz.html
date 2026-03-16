@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="titulo">projetinho</div>
+    </header>
+    <div id="container">
+        Quiz sobre o que você viu nesse site. Não esqueça de ver a página 
+            "sobre mim" para não perder nenhum conhecimento essencial para responder as perguntas! <br>
+
+            <form id="quiz">
+                <label for="p1">Qual é o meu nome?</label><br>
+                <input id="p1" type="text" name="p1"placeholder="pelo amor de deus saiba isso pelo menos"><br>
+
+                <label for="p2">Onde eu fiz meu curso técnico?</label><br>
+                <input id="p2" type="text" name="p2"placeholder="Dica: é da Unicamp"><br>
+
+                <label for="p3">De que cidade eu sou?</label><br>
+                <input id="p3" type="text" name="p3"placeholder="pertinho de São Carlos, duas horas na direção de São Paulo"><br>
+
+                <label for="p4">Que animal apareceu nas minhas fotos?</label><br>
+                <input id="p4" type="text" name="p4"placeholder="um animal que indevidamente estava no meu teclado"><br>
+
+
+                <input type="submit" value="Testar conhecimentos">
+
+
+            </form>
+            <div id="msg"></div>
+            <script>
+                document.getElementById("quiz").addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    const p1 = document.getElementById("p1").value.toLowerCase();
+                    const p2 = document.getElementById("p2").value.toLowerCase();
+                    const p3 = document.getElementById("p3").value.toLowerCase();
+                    const p4 = document.getElementById("p4").value.toLowerCase();
+
+                    if(p1 === "cecilia" || p1 === "cecília")
+                    {
+                        if(p2 === "cotil")
+                        {
+                            if(p3 === "campinas")
+                            {
+                                if(p4 === "gato" || p4 === "gatinho")
+                                {
+                                    document.getElementById("msg").textContent = "Uhull!! Acertou";
+                                }
+                                else
+                                {
+                                    document.getElementById("msg").textContent = "Tente de novo";
+                                }
+                            }
+                            else
+                            {
+                                document.getElementById("msg").textContent = "Tente de novo";
+                            }
+                        }
+                        else
+                        {
+                            document.getElementById("msg").textContent = "Tente de novo";
+                        }
+                    }
+                    
+                });
+            </script>
+        
+    </div>
+</body>
+</html>
